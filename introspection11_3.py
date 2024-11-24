@@ -9,7 +9,7 @@ def introspection_info(obj):
     attributes = [attr for attr in dir(obj) if not callable(getattr(obj, attr)) and not attr.startswith("__")]
 
     # Получаем методы объекта
-    methods = [method for method in dir(obj) if callable(getattr(obj, method)) and not method.startswith("__")]
+    methods = [method for method in dir(obj) if callable(getattr(obj, method))]
 
     #Получаем модуль, к которому принадлежит объект
     obj_module = obj.__class__.__module__
